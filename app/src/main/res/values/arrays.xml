@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="your_array_name">
+        <item>Washable</item>
+        <item>Odourless</item>
+        <item>Mosquito-repelling</item>
+        <item>Metallic</item>
+        <item>Basic</item>
+        <item>Weather-proof</item>
+
+        <!-- Add more items as needed -->
+    </array>
+    <array name="color_array">
+        <item>White</item>
+        <item>Black</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <!-- Add more items as needed -->
+    </array>
+</resources>

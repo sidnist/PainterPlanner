@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Painter Planner</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quotation_generator">Quotation Generator</string>
+    <string name="paint_area_m_2">Paint Area (m^2):</string>
+    <string name="types_of_paint">Types Of Paint:</string>
+    <string name="color_of_paint">Colour Of Paint:</string>
+    <string name="time_required">Hours Required:</string>
+    <string name="level_of_surface_preparation">Level of Surface Preparation:</string>
+    <string name="m_2">m^2</string>
+    <string name="_0">0</string>
+    <string name="days">Hours</string>
+    <string name="report_generator">Report Generator</string>
+    <string name="download">Download</string>
+    <string name="generate_quote">Generate Quote</string>
+    <string name="submit">     Confirm     </string>
+    <string name="date">Date:</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="customer_information">Customer Information</string>
+</resources>

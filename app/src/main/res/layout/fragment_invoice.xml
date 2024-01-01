@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".presentation.invoice.InvoiceFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/datehead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:text="Report from [Start date] to [End date]"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerColor="@color/black" />
+
+                <TableRow
+                    android:id="@+id/row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:ellipsize="marquee"
+                        android:maxLines="1"
+                        android:paddingVertical="5dp"
+                        android:text="Item"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:paddingVertical="5dp"
+                        android:text="Quantity"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:ellipsize="marquee"
+                        android:maxLines="1"
+                        android:paddingVertical="5dp"
+                        android:text="Avg cost ($)"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="marquee"
+                        android:maxLines="1"
+                        android:paddingVertical="5dp"
+                        android:text="Total Cost ($)"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="@color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvItem"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+                    android:text="Labour"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+                    android:text="Date"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvAvg"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+                    android:text="Cost"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvCost"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="5dp"
+                    android:text="Cost"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </TableRow>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="@color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+                    android:text="Paint"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+
+                    android:id="@+id/tvQuantityPaint"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+                    android:text="Date"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvAvgPaint"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+                    android:text="Cost"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvCostPaint"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="5dp"
+                    android:text="Cost"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </TableRow>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="@color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+                    android:text="Surface Preparation"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+
+                    android:id="@+id/tvQuantityService"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvAvgService"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cell_shape"
+                    android:paddingVertical="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvCostService"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="5dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </TableRow>
+
+
+            <LinearLayout
+                android:id="@+id/rowFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerColor="@color/black" />
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:ellipsize="marquee"
+                        android:maxLines="1"
+                        android:paddingVertical="5dp"
+                        android:text="Total Cost"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTotalQuantity"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:paddingVertical="5dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTotalAvg"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:ellipsize="marquee"
+                        android:maxLines="1"
+                        android:paddingVertical="5dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTotalCost"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="marquee"
+                        android:maxLines="1"
+                        android:paddingVertical="5dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerColor="@color/black" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:orientation="vertical"-->
+        <!--            tools:context=".presentation.invoice.InvoiceFragment">-->
+
+        <!--            <androidx.recyclerview.widget.RecyclerView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:id="@+id/rv"-->
+        <!--                tools:listitem="@layout/invoice_layout"-->
+        <!--                android:layout_height="wrap_content">-->
+        <!--            </androidx.recyclerview.widget.RecyclerView>-->
+
+        <!--        </LinearLayout>-->
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:id="@+id/footer"
+
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDownlaod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="80dp"
+            android:backgroundTint="@color/purple_500"
+            android:padding="16dp"
+            android:text="@string/download"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+
+
+
+    </RelativeLayout>
+
