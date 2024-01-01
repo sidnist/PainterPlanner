@@ -27,7 +27,7 @@ public class CustomerInformationFragment extends Fragment {
     QuoteDatabase quoteDatabase;
     QuoteDataDao dataDao;
     InsertHomeItemModel argumentModel;
-    int position = 0;
+    int position = 1;
     float percentage = 0;
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
